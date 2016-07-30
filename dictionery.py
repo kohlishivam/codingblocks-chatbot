@@ -18,5 +18,5 @@ for i ,j in student.items():
 students={}
 students['1']=student # for creating a nested dictionery to obtain details of many students 
 
-print students
+print students.items()
 
