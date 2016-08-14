@@ -1,0 +1,33 @@
+{% extends "search/base.html" %}
+{% block title %}hello{{a}}{% endblock title %}
+
+{% block content %}
+
+<!-- <img src='static/images/{{list_dir.0}}' />
+<code>
+	{{list_dir}}
+</code>
+ -->
+
+
+{% for pokemon in pokedex %}:
+    <p>{{pokemon.pokemon_name}} :
+        type {{pokemon.pokemon_type}}</p>
+ <img src ='static/images/{{pokemon.pokemon_image}}'  
+ {% endfor %}     
+
+ 
+     <div class='row'>
+         {% for j in '123' %}
+             <div class="col-md-4">
+                 <img src = 'static/images/{{list_dir.7}}'>
+             </div>
+         
+     </div> 
+  {% endfor %}              
+{% for item in list_dir %}
+    <a href ="static/images/{{item}}">{{item}}</a>
+{% endfor %}    
+
+
+ {% endblock content %}
