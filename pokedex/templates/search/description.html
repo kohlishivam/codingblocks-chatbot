@@ -1,0 +1,82 @@
+{% extends "search/base.html" %}
+
+{% block head %}
+	<title> {{date}} </title>
+	<style type="text/css">
+		img{
+			width: 350px;	
+		}
+	</style>
+{% endblock head %}
+
+{% block meta %}
+	
+
+		<meta itemprop="image" content="{{pokemon.pokemon_image}}">
+
+		<meta property="og:title" content="{{pokemon.pokemon_name}} Pokemon"/>
+		<meta property="og:description" content=""/>
+		<meta property="og:image" content="{{pokemon.pokemon_image}}"/> 
+		<meta property="og:site_name" content="fathomless-garden-39911.herokuapp.com"/> 
+
+		<meta property="og:url" content="http://fathomless-garden-39911.herokuapp.com/pokemon/{{pokemon.id}}/{{pokemon.pokemon_name}}" />
+		<meta property="article:author" content="http://facebook.com/one.saurav.tomar" />
+		<meta property="article:publisher" content="https://www.facebook.com/one.saurav.tomar"/>
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@sauravtom" />
+		<meta name="twitter:title" content="{{pokemon.pokemon_name}} Pokemon" />
+		<meta name="twitter:description" content="" />
+		<meta name="twitter:image" content="{{pokemon.pokemon_image}}" />
+
+{% endblock meta %}
+
+
+{% block content %}
+
+<h1>You Searched for #{{pokemon.id}} {{pokemon.pokemon_name}} </h1>""
+
+
+<div class = 'row'>
+<div class = 'col-md-6'>
+
+	
+	<img src="{{pokemon.pokemon_image}}">
+</div>
+
+<div class = 'col-md-6'>
+<a href  = "https://www.facebook.com/sharer/sharer.php?u=google.com">
+<button class = 'btn btn-success'>share on fb</button>
+</a>
+<a href  = "https://www.facebook.com/sharer/sharer.php?u=google.com">
+<button class = 'btn btn-warning'>share on twitter</button>
+</a>
+<a href  = "https://twitter.com/home?status=google.com%0A">
+<button class = 'btn btn-primary'>share on linked in </button>
+</a>
+<a href  = "mailto:kohlivishrut@gmail.com?&subject=aur kaisa hai&body=hiiii%0A%20google.com">
+<button class = 'btn btn-primary'>email this </button>
+</a>
+</a>
+<a href  = "https://pinterest.com/pin/create/button/?url=http%3A//img.pokemondb.net/artwork/ivysaur.jpg&media=ivysaur&description=hiiiii">
+<button class = 'btn btn-primary'>pinterest this </button>
+</a>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock content %}
+
+
+
+
+
