@@ -1,63 +1,64 @@
-.{% extends "search/base.html" %}
+{% extends "search/base.html" %}
 
 {% block head %}
-  <title> {{date}} </title>
-  <style type="text/css">
-    img{
-      width: 350px; 
-    }
-  </style>
+	<title> {{date}} </title>
+	<style type="text/css">
+		img{
+			width: 350px;	
+		}
+	</style>
 {% endblock head %}
 
 {% block meta %}
-  
+	
 
-    <meta itemprop="image" content="{{pokemon.pokemon_image}}">
+		<meta itemprop="image" content="{{pokemon.pokemon_image}}">
 
-    <meta property="og:title" content="{{pokemon.pokemon_name}} Pokemon"/>
-    <meta property="og:description" content=""/>
-    <meta property="og:image" content="{{pokemon.pokemon_image}}"/> 
-    <meta property="og:site_name" content="fathomless-garden-39911.herokuapp.com"/> 
+		<meta property="og:title" content="{{pokemon.pokemon_name}} Pokemon"/>
+		<meta property="og:description" content=""/>
+		<meta property="og:image" content="{{pokemon.pokemon_image}}"/> 
+		<meta property="og:site_name" content="fathomless-garden-39911.herokuapp.com"/> 
+		<meta property="fb:app_id" content="1724325281176951" />
 
-    <meta property="og:url" content="http://fathomless-garden-39911.herokuapp.com/pokemon/{{pokemon.id}}/{{pokemon.pokemon_name}}" />
-    <meta property="article:author" content="http://facebook.com/one.saurav.tomar" />
-    <meta property="article:publisher" content="https://www.facebook.com/one.saurav.tomar"/>
+		<meta property="og:url" content="http://fathomless-garden-39911.herokuapp.com/pokemon/{{pokemon.id}}/{{pokemon.pokemon_name}}" />
+		<meta property="article:author" content="http://facebook.com/one.saurav.tomar" />
+		<meta property="article:publisher" content="https://www.facebook.com/one.saurav.tomar"/>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@sauravtom" />
-    <meta name="twitter:title" content="{{pokemon.pokemon_name}} Pokemon" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="{{pokemon.pokemon_image}}" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@sauravtom" />
+		<meta name="twitter:title" content="{{pokemon.pokemon_name}} Pokemon" />
+		<meta name="twitter:description" content="{{pokemon.pokemon_name}} Pokemon" />
+    	<meta name="twitter:text" content="foo-text" />
+		<meta name="twitter:image" content="{{pokemon.pokemon_image}}" />
 
 {% endblock meta %}
 
 
 {% block content %}
 
-<h1>You Searched for {{pokemon.id}} {{pokemon.pokemon_name}} </h1>""
+<h3>What's the name of this pokemon ?</h3>
+
+<img src='{{pokemon.pokemon_image}}'>
 
 
-<div class = 'row'>
-<div class = 'col-md-6'>
-
-  
-  <img src="{{pokemon.pokemon_image}}">
-</div>
-
-
-
-</div>
-
-
-
-
-
+<p>{{pokemon_names}}</p>
 
 
 
 {% endblock content %}
 
+{% block scripts %}
 
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
 
+		   
+		   
+		});
+	
+	</script>
+
+{% endblock scripts %}
 
 
